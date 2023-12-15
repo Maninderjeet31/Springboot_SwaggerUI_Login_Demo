@@ -1,0 +1,97 @@
+openapi: 3.0.0
+info:
+  title: User Login API
+  description: PNC SpringBoot-Swagger Assignment.
+  summary: This application uses Spring boot and Swagger and demos login with criteria
+
+contact:
+  name: Maninderjeet Singh
+  email: maninderjeet.singh@example.com
+
+license:
+  name: "License No - N/A"
+
+version: v1.0.0
+
+servers:
+  - description: Dev
+    url: http://localhost:8080
+
+  - description: Test
+    url: http://localhost:8080
+
+paths:
+  /users/login/username/{username}/password/{password}/ipaddress/{ipaddress}:
+    get:
+      summary: Logins by username, password and specific geo-location
+      parameters:
+        - name: username
+          in: path
+          required: true
+          description: The username of the user to return.
+          schema:
+            type: string
+            minimum: 1
+        - name: password
+          in: path
+          required: true
+          description: "Password must have at least 8 characters long, contains at least 1 Capitalized letter, 1 number and one of the following special characters: _ # $ %"
+          schema:
+            type: string
+            minimum: 8
+            pattern: "^(?=.*[A-Z])(?=.*[0-9])(?=.*[_#$%])[A-Za-z0-9_#$%]+$"
+        - name: ipaddress
+          in: path
+          required: true
+          description: The ipaddress of the user to return.
+          schema:
+            type: string
+            maximum: 1
+      responses:
+        '200':
+          description: A message.
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: 'Passed!'
+        '400':
+          description: Any specified value is invalid.
+        '404':
+          description: The User with specified credentials is not found.
+        '500':
+          description: Encountered some error.
+        default:
+          description: Unexpected error.
+
+
+components:
+  schemas:
+    User:
+      type: Object
+      properties:
+        id:
+          type: integer
+          example: 4
+        username:
+          type: string
+          minLength: 5
+          example: user1
+        password:
+          type: string
+          minLength: 8
+          pattern: "^(?=.*[A-Z])(?=.*[0-9])(?=.*[_#$%])[A-Za-z0-9_#$%]+$"
+          example: Abc#1234
+          description: "Password must have at least 8 characters long, contains at least 1 Capitalized letter, 1 number and one of the following special characters: _ # $ %"
+          examples:
+            invalid:
+              value: ""
+              summary: "Invalid Password"
+              description: "The password field is required and must meet the specific requirements"
+        ipaddress:
+          type: string
+          example: 123.456.789.000
+        required:
+          - username
+          - password
+          - ipaddress
