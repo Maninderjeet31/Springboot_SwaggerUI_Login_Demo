@@ -29,9 +29,9 @@ paths:
           in: path
           required: true
           description: The username of the user to return.
+          minimum: 1
           schema:
             type: string
-            minimum: 1
         - name: password
           in: path
           required: true
@@ -40,13 +40,14 @@ paths:
             type: string
             minimum: 8
             pattern: "^(?=.*[A-Z])(?=.*[0-9])(?=.*[_#$%])[A-Za-z0-9_#$%]+$"
+            description: "Password must have at least 8 characters long, contains at least 1 Capitalized letter, 1 number and one of the following special characters: _ # $ %"
         - name: ipaddress
           in: path
           required: true
           description: The ipaddress of the user to return.
+          minimum: 1
           schema:
             type: string
-            maximum: 1
       responses:
         '200':
           description: A message.

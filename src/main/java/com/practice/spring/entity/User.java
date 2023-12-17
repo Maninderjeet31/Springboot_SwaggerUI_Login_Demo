@@ -1,6 +1,8 @@
 package com.practice.spring.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 import java.util.Objects;
 
@@ -12,8 +14,12 @@ public class User {
     @Column(name = "id")
     private int id;
     @Column(name = "username")
+    @NotNull(message = "is required")
+    @Size(min = 1, message = "is required")
     private String username;
     @Column(name = "password")
+    @NotNull(message = "is required")
+    @Size(min = 8, message = "Password should be at least 8 characters long")
     private String password;
     @Column(name = "ipaddress")
     private String IPAddress;
