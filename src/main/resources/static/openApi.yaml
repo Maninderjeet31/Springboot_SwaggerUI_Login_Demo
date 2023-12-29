@@ -1,24 +1,26 @@
 openapi: 3.0.0
 info:
-  title: User Login API
-  description: PNC SpringBoot-Swagger Assignment.
-  summary: This application uses Spring boot and Swagger and demos login with criteria
+  title: User Login API - OpenAPI 3.0
+  description: |-
+    Project for: PNC SpringBoot-Swagger Assignment.
+    
+    This application uses Spring boot and OpenAPI 3 
+    
+    And it demonstrates the login with validation criteria
 
+termsOfService: http://example.com/terms/
 contact:
   name: Maninderjeet Singh
   email: maninderjeet.singh@example.com
-
 license:
-  name: "License No - N/A"
-
-version: v1.0.0
+  name: License No - N/A
+version: 1.0.0
 
 servers:
-  - description: Dev
-    url: http://localhost:8080
-
-  - description: Test
-    url: http://localhost:8080
+  - url: http://localhost:8080
+    description: Development environment
+  - url: http://localhost:8080
+    description: Testing environment
 
 paths:
   /users/login/username/{username}/password/{password}/ipaddress/{ipaddress}:
