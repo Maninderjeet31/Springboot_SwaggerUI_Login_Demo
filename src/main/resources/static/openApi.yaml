@@ -22,9 +22,15 @@ servers:
   - url: http://localhost:8080
     description: Testing environment
 
+tags:
+  - name: User
+    description: Login with user credentials
+
 paths:
   /users/login/username/{username}/password/{password}/ipaddress/{ipaddress}:
     get:
+      tags:
+        - User
       summary: Logins with username, password and Canada's geo-location
       parameters:
         - name: username
