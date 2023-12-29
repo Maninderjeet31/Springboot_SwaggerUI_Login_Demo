@@ -8,13 +8,13 @@ info:
     
     And it demonstrates the login with validation criteria
 
-termsOfService: http://example.com/terms/
-contact:
-  name: Maninderjeet Singh
-  email: maninderjeet.singh@example.com
-license:
-  name: License No - N/A
-version: 1.0.0
+  termsOfService: http://example.com/terms/
+  contact:
+    name: Maninderjeet Singh
+    email: maninderjeet.singh@example.com
+  license:
+    name: License No - N/A
+  version: 1.0.0
 
 servers:
   - url: http://localhost:8080
