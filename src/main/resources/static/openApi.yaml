@@ -25,7 +25,7 @@ servers:
 paths:
   /users/login/username/{username}/password/{password}/ipaddress/{ipaddress}:
     get:
-      summary: Logins by username, password and specific geo-location
+      summary: Logins with username, password and Canada's geo-location
       parameters:
         - name: username
           in: path
