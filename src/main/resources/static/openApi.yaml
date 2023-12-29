@@ -27,15 +27,26 @@ paths:
       parameters:
         - name: username
           in: path
+          description: 'The username of the user to return.'
           required: true
-          description: The username of the user to return.
-          minimum: 1
           schema:
             type: string
         - name: password
           in: path
           required: true
-          description: "Password must have at least 8 characters long, contains at least 1 Capitalized letter, 1 number and one of the following special characters: _ # $ %"
+          description:
+            >
+            
+            Password must have 
+
+             1.at least 8 characters long, 
+            
+             2.contains at least 1 Capitalized letter
+            
+             3.contains at least 1 number  
+            
+             4.contains at least one of the following: _ # $ %
+
           schema:
             type: string
             minimum: 8
@@ -45,7 +56,6 @@ paths:
           in: path
           required: true
           description: The ipaddress of the user to return.
-          minimum: 1
           schema:
             type: string
       responses:
@@ -56,7 +66,7 @@ paths:
               schema:
                 type: string
               example:
-                > 
+                >
                 ID: xxxxxxxx-xxxx..
                  Welcome user from Montreal
         '400':
@@ -72,30 +82,24 @@ paths:
 components:
   schemas:
     User:
-      type: Object
+      required:
+        - username
+        - password
+        - ipaddress
+      type: object
       properties:
         id:
           type: integer
+          format: int64
           example: 4
         username:
           type: string
-          minLength: 5
+          minimum: 1
           example: user1
         password:
           type: string
-          minLength: 8
-          pattern: "^(?=.*[A-Z])(?=.*[0-9])(?=.*[_#$%])[A-Za-z0-9_#$%]{8}$"
           example: Abc_1234
-          description: "Password must have at least 8 characters long, contains at least 1 Capitalized letter, 1 number and one of the following special characters: _ # $ %"
-          examples:
-            invalid:
-              value: ""
-              summary: "Invalid Password"
-              description: "The password field is required and must meet the specific requirements"
         ipaddress:
           type: string
+          minimum: 1
           example: 123.456.789.000
-        required:
-          - username
-          - password
-          - ipaddress
