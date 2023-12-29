@@ -68,7 +68,8 @@ paths:
               example:
                 >
                 ID: xxxxxxxx-xxxx..
-                 Welcome user from Montreal
+                
+                Welcome user from Montreal
         '400':
           description: Any specified value is invalid.
         '404':
