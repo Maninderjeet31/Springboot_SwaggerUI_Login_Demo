@@ -29,7 +29,7 @@ paths:
       parameters:
         - name: username
           in: path
-          description: 'The username of the user to return.'
+          description: 'The username cannot be empty.'
           required: true
           schema:
             type: string
@@ -53,16 +53,15 @@ paths:
             type: string
             minimum: 8
             pattern: "^(?=.*[A-Z])(?=.*[0-9])(?=.*[_#$%])[A-Za-z0-9_#$%]{8}$"
-            description: "Password must have at least 8 characters long, contains at least 1 Capitalized letter, 1 number and one of the following special characters: _ # $ %"
         - name: ipaddress
           in: path
           required: true
-          description: The ipaddress of the user to return.
+          description: 'The IP-address cannot be empty.'
           schema:
             type: string
       responses:
         '200':
-          description: A message.
+          description: A success message.
           content:
             text/plain:
               schema:
@@ -91,10 +90,6 @@ components:
         - ipaddress
       type: object
       properties:
-        id:
-          type: integer
-          format: int64
-          example: 4
         username:
           type: string
           minimum: 1
