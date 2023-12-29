@@ -39,7 +39,7 @@ paths:
           schema:
             type: string
             minimum: 8
-            pattern: "^(?=.*[A-Z])(?=.*[0-9])(?=.*[_#$%])[A-Za-z0-9_#$%]+$"
+            pattern: "^(?=.*[A-Z])(?=.*[0-9])(?=.*[_#$%])[A-Za-z0-9_#$%]{8}$"
             description: "Password must have at least 8 characters long, contains at least 1 Capitalized letter, 1 number and one of the following special characters: _ # $ %"
         - name: ipaddress
           in: path
@@ -55,7 +55,10 @@ paths:
             text/plain:
               schema:
                 type: string
-              example: 'Passed!'
+              example:
+                > 
+                ID: xxxxxxxx-xxxx..
+                 Welcome user from Montreal
         '400':
           description: Any specified value is invalid.
         '404':
@@ -81,8 +84,8 @@ components:
         password:
           type: string
           minLength: 8
-          pattern: "^(?=.*[A-Z])(?=.*[0-9])(?=.*[_#$%])[A-Za-z0-9_#$%]+$"
-          example: Abc#1234
+          pattern: "^(?=.*[A-Z])(?=.*[0-9])(?=.*[_#$%])[A-Za-z0-9_#$%]{8}$"
+          example: Abc_1234
           description: "Password must have at least 8 characters long, contains at least 1 Capitalized letter, 1 number and one of the following special characters: _ # $ %"
           examples:
             invalid:

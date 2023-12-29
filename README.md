@@ -12,6 +12,9 @@ Usage
 4. This API passes only if the credentials are OK and the geo-location returned is anywhere within Canada.
 5. Response message has an ID (generated on the fly using UUID) and greeting message with username and city name based on their IP address.
 
+To run the Swager UI, use the following url in your browser:
+http://localhost:8080/swagger-ui/index.html#/default/get_users_login_username__username__password__password__ipaddress__ipaddress_
+
 Backend Tables used: User
 1. The fields and their type and constraints. The ipaddress field is optional. The initial idea was to store the IP addresses but then added functionality to take an IP address from the user on the fly.
 ![Test Image 1](https://github.com/Maninderjeet31/Springboot_SwaggerUI_Login_Demo/blob/main/screenshots/User_Table_Descr.png)
