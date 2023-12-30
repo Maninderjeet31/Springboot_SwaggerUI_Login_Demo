@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
   title: User Login API - OpenAPI 3.0
-  description: |-
-    Project for: PNC SpringBoot-Swagger Assignment.
+  description: |
+    PNC SpringBoot-OpenAPI Assignment.
     
     This application uses Spring boot and OpenAPI 3 
     
