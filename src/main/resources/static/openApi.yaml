@@ -39,6 +39,7 @@ paths:
           required: true
           schema:
             type: string
+            minimum: 1
         - name: password
           in: path
           required: true
@@ -64,6 +65,7 @@ paths:
           required: true
           description: 'The IP-address cannot be empty.'
           schema:
+            minimum: 1
             type: string
       responses:
         '200':
