@@ -39,7 +39,7 @@ paths:
           required: true
           schema:
             type: string
-            minimum: 1
+            minLength: 1
         - name: password
           in: path
           required: true
@@ -58,14 +58,15 @@ paths:
 
           schema:
             type: string
-            minimum: 8
+            format: password
+            minLength: 8
             pattern: "^(?=.*[A-Z])(?=.*[0-9])(?=.*[_#$%])[A-Za-z0-9_#$%]{8}$"
         - name: ipaddress
           in: path
           required: true
           description: 'The IP-address cannot be empty.'
           schema:
-            minimum: 1
+            minLength: 1
             type: string
       responses:
         '200':
@@ -100,10 +101,13 @@ components:
       properties:
         username:
           type: string
-          minimum: 1
+          minLength: 1
           example: user1
         password:
           type: string
+          format: password
+          minLength: 8
+          pattern: "^(?=.*[A-Z])(?=.*[0-9])(?=.*[_#$%])[A-Za-z0-9_#$%]{8}$"
           example: Abc_1234
         ipaddress:
           type: string
