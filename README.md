@@ -37,4 +37,4 @@ Swagger UI Screenshots
 ![Test Image 6](https://github.com/Maninderjeet31/Springboot_SwaggerUI_Login_Demo/blob/main/screenshots/op_Screenshot_4.png)
 
 5. Swagger UI Result page with a fail message as a response from API
-![Test Image 7](https://github.com/Maninderjeet31/Springboot_SwaggerUI_Login_Demo/blob/main/screenshots/fail_op_Screenshot_4.png)
+![Test Image 7](https://github.com/Maninderjeet31/Springboot_SwaggerUI_Login_Demo/blob/main/screenshots/fail_op_Screenshot_5.png)
