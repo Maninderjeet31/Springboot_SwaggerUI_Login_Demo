@@ -20,15 +20,21 @@ Backend Tables used: User
 ![Test Image 1](https://github.com/Maninderjeet31/Springboot_SwaggerUI_Login_Demo/blob/main/screenshots/User_Table_Descr.png)
 
 2. The dummy values in the table.
-![Test Image 1](https://github.com/Maninderjeet31/Springboot_SwaggerUI_Login_Demo/blob/main/screenshots/User_Table_Values.png)
+![Test Image 2](https://github.com/Maninderjeet31/Springboot_SwaggerUI_Login_Demo/blob/main/screenshots/User_Table_Values.png)
 
 Swagger UI Screenshots
 
 1. Swagger UI Initial Page 1
-![Test Image 1](https://github.com/Maninderjeet31/Springboot_SwaggerUI_Login_Demo/blob/main/screenshots/Screenshot_1.png)
+![Test Image 3](https://github.com/Maninderjeet31/Springboot_SwaggerUI_Login_Demo/blob/main/screenshots/Screenshot_1.png)
 
 2. Swagger UI Initial Page 2
-![Test Image 1](https://github.com/Maninderjeet31/Springboot_SwaggerUI_Login_Demo/blob/main/screenshots/Screenshot_2.png)
+![Test Image 4](https://github.com/Maninderjeet31/Springboot_SwaggerUI_Login_Demo/blob/main/screenshots/Screenshot_2.png)
 
-1. Swagger UI Result page with a message as a response from API
-![Test Image 1](https://github.com/Maninderjeet31/Springboot_SwaggerUI_Login_Demo/blob/main/screenshots/Screenshot_3.png)
+3. Swagger UI Initial Page 2
+![Test Image 5](https://github.com/Maninderjeet31/Springboot_SwaggerUI_Login_Demo/blob/main/screenshots/Screenshot_3.png)
+
+4. Swagger UI Result page with a successful message as a response from API
+![Test Image 6](https://github.com/Maninderjeet31/Springboot_SwaggerUI_Login_Demo/blob/main/screenshots/op_Screenshot_4.png)
+
+5. Swagger UI Result page with a fail message as a response from API
+![Test Image 7](https://github.com/Maninderjeet31/Springboot_SwaggerUI_Login_Demo/blob/main/screenshots/fail_op_Screenshot_4.png)
